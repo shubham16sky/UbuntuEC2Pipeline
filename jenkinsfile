@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    stages{
+        stage("Initializing") {
+            steps{
+                sh 'terraform init'
+            }
+        }
+
+        stage("Validating") {
+            steps{
+                sh 'terraform validate'
+            }
+        }
+
+        stage("Applying / Destryoing") {
+            steps{
+                sh 'terrafrom $(action) --auto-approve'
+            }
+        }
+
+
+        stage("Final") {
+            steps{
+                echo "You have successfully created an Ubuntu instance"
+            }
+        }
+    }
+}
