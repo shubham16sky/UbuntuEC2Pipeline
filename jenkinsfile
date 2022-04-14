@@ -15,7 +15,7 @@ pipeline{
 
         stage("Applying / Destryoing") {
             steps{
-                sh 'terrafrom ${action} --auto-approve'
+                sh 'terraform ${action} --auto-approve'
             }
         }
 
