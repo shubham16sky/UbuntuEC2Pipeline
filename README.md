@@ -4,7 +4,7 @@ A very simple Jenkins parameterized pipeline to provision Ubuntu EC2 using terra
 
 
 
-#prerequisites
+# prerequisites
 
 --> OpenJdk - 17\
 --> Jenkins Installed on Server or Local machine.\
